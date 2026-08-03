@@ -1,0 +1,5 @@
+numpy>=1.24
+nibabel>=5.3.2
+cloud-volume>=12.8.0
+igneous-pipeline>=4.0
+rangehttpserver>=1.4.0

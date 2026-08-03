@@ -1,0 +1,7 @@
+precomputed_volume*/*
+*.pyc
+*.nii.gz
+build/*
+dist/*
+src/nii_to_precomputed.egg-info/*
+nii_to_precomputed/_version.py
