@@ -56,6 +56,10 @@ def build_meshes(
         max_simplification_error=max_simplification_error,
         dust_threshold=dust_threshold,
         progress=False,
+        # gzip mesh fragments aren't decompressed by a plain static file
+        # server (no Content-Encoding rewriting), so Neuroglancer would
+        # try to parse the raw gzip bytes as mesh data and fail.
+        compress=None,
     )
     tq.insert(meshing_tasks)
     tq.execute()
