@@ -81,6 +81,7 @@ def main(
     lut = None
     present_ids = None
     if resolved_type == "segmentation":
+        data = data.astype(np.uint32)
         present_ids = np.unique(data)
         present_ids = present_ids[present_ids != background_id]
         resolved_lut_path = find_sibling_lut(nii_file, lut_path)
